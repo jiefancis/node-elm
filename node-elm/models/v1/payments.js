@@ -34,7 +34,7 @@ async function findOne() {
       });
     }
   } catch (error) {
-    console.log('Explain.findOne::', error);
+    console.log('Payments.findOne::', error);
   }
 }
 findOne();

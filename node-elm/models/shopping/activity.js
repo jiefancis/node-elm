@@ -35,7 +35,7 @@ async function findOne() {
       });
     }
   } catch (error) {
-    console.log('Explain.findOne::', error);
+    console.log('Activity.findOne::', error);
   }
 }
 findOne();

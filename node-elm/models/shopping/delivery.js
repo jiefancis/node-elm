@@ -29,7 +29,7 @@ async function findOne() {
       Delivery.create(deliveryData);
     }
   } catch (error) {
-    console.log('Explain.findOne::', error);
+    console.log('Delivery.findOne::', error);
   }
 }
 findOne();

@@ -102,7 +102,7 @@ async function findOne() {
       Cities.create({ data: cityData });
     }
   } catch (error) {
-    console.log('Explain.findOne::', error);
+    console.log('Cities.findOne::', error);
   }
 }
 findOne();

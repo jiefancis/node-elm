@@ -23,7 +23,7 @@ async function findOne() {
       Remark.create(remarkData);
     }
   } catch (error) {
-    console.log('Explain.findOne::', error);
+    console.log('Remark.findOne::', error);
   }
 }
 findOne();

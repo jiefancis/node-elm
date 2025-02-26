@@ -12,6 +12,16 @@
 
 ## 项目运行
 
+- node-elm api
+
+```
+
+  node@v16.20.0
+
+  npm install mongodb@latest mongoose@latest connect-mongo@latest
+
+```
+
 - vue2-elm h5 前端
 
 ```

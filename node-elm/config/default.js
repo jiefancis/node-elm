@@ -3,7 +3,7 @@
 module.exports = {
   port: parseInt(process.env.PORT, 10) || 8001,
   // url: 'mongodb://localhost:27017/elm',
-  url: 'mongodb://admin:123456@localhost:27017/elm?authSource=authenticationDatabase',
+  url: 'mongodb://admin:123456@localhost:27017/elm?authSource=admin',
   session: {
     name: 'SID',
     secret: 'SID',

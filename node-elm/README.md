@@ -52,9 +52,32 @@ app.use(
 
   在 node-elm 终端内执行 docker cp ../sql/ mongo1:/data/sql
 
-- 2. 在 mongo 容器内执行 mongoimport 命令
+- 2. 进入 docker mongo 容器
 
-  mongorestore --port 27017 --db elm /data/sql
+docker exec -it container_id bash
+
+如果不懂 container_id 是多少，可以通过 docker ps 查看。
+
+- 2. 在 mongo 容器内执行 mongorestore 命令
+
+  mongorestore --port 27017 --username admin --password 123456 --authenticationDatabase admin --db elm /data/sql
+
+- 3. 进入 mongodb 容器的 mongo 命令行
+
+     mongosh 'mongodb://admin:123456@localhost:27017/elm?authSource=admin'
+
+- 4. 初始化副本集
+
+```
+rs.initiate({ _id: 'rs0', members: [ { _id: 0, host: 'localhost:27017', priority: 2 }] })
+```
+
+**注意事项：**
+rs.initiate()中 host 如果写错了，可以通过
+
+获取当前副本集配置-------var cfg = rs.conf()
+修改成员的 host 信息------cfg.members[0].host = 'localhost:27017'
+重新配置副本集----------rs.reconfig(cfg)
 
 - 3. 更改 config/default.js 文件中 mongo 配置
 
@@ -68,6 +91,12 @@ app.use(
 - 1. docker exec -it container_id bash
 
 如果不懂 container_id 是多少，可以通过 docker ps 查看。
+
+初始化副本集
+
+```
+rs.initiate({ _id: 'rs0', members: [ { _id: 0, host: 'localhost:27017', priority: 2 }] })
+```
 
 - 2. 进入 mongodb
 

@@ -60,7 +60,7 @@ async function findOne() {
       newIds.save();
     }
   } catch (error) {
-    console.log('Explain.findOne::', error);
+    console.log('Ids.findOne::', error);
   }
 }
 findOne();
