@@ -1,0 +1,74 @@
+# version: '3'
+# services:
+#   mongodb:
+#     image: mongodb:latest
+#     container_name: mongodb
+#     ports:
+#       - '27017:27017'
+#     environment:
+#       - MONGO_INITDB_ROOT_USERNAME=admin
+#       - MONGO_INITDB_ROOT_PASSWORD=123456
+#     # 宿主机路径:容器内路径
+#     volumes:
+#       - ./db:/data/db
+#     # command: ['--config', '/etc/mongod.conf']
+#     restart: always
+
+# version: '3'
+# services:
+#   mongo1:
+#     image: mongodb:latest
+#     container_name: mongo1
+#     command: >
+#       mongod --replSet rs0 --port 27017 --bind_ip_all
+#       --auth --keyFile /data/mongodb/keyfile
+#     ports:
+#       - '27017:27017'
+#     environment:
+#       - MONGO_INITDB_ROOT_USERNAME=admin
+#       - MONGO_INITDB_ROOT_PASSWORD=123456
+#     volumes:
+#       - ./db/mongo1:/data/db
+#       - /Users/zyy/Desktop/程序集合/前后端完整项目/仿外卖/node-elm/keyfile:/data/mongodb/keyfile:ro # 挂载 Key File
+#     restart: always
+#     # networks:
+#     #   - mongo-network
+
+# # networks:
+# #   mongo-network:
+# #     driver: bridge
+
+# # volumes:
+# #   db:
+
+## redis
+
+# version: '3'
+# services:
+#   redis:
+#     image: redis:7.2.3
+#     container_name: my_redis
+#     ports:
+#       - '6379:6379'
+#     restart: always
+#     volumes:
+#       - redis-data:/data
+
+# volumes:
+#   redis-data:
+
+## mysql
+
+version: '3'
+services:
+  mysql:
+    image: mysql:8.0.34
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: gmx
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    ports:
+      - '3309:3306'

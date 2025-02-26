@@ -1,0 +1,7 @@
+.DS_Store
+.history/
+
+**/*/node_modules/
+**/*/db/
+
+sql/
