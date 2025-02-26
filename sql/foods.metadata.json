@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"elm.foods"},{"v":1,"key":{"item_id":1},"name":"item_id_1","ns":"elm.foods","background":true}]}
