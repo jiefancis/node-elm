@@ -1,8 +1,16 @@
+# 2025 记录
+
+- 项目运行 node 与 node-sass 版本问题
+
+- node@12.22.10
+
+- npm install -D --legacy-peer-deps node-sass@4 sass-loader@6
+
 # 前言
 
 [README in English](README-en.md)
 
-初学vue时曾在网上搜索vue的实战项目源码，无奈大部分都是简单的demo，对于深究vue没有太大的帮助，剩下的一些大部分都是像音乐播放器之类的展示型项目，交互没有预期那么复杂。但我们实际在工作中，经常会遇到有购物车的项目，这类项目因为涉及到money，所以对逻辑严谨度要求高，页面之间交互复杂，又会伴随着登录、注册、用户信息等等，常常会让我们很头疼。既然还没人用vue写过这样的项目，那不如我来写，开源出来对能看到的人也会有帮助。
+初学 vue 时曾在网上搜索 vue 的实战项目源码，无奈大部分都是简单的 demo，对于深究 vue 没有太大的帮助，剩下的一些大部分都是像音乐播放器之类的展示型项目，交互没有预期那么复杂。但我们实际在工作中，经常会遇到有购物车的项目，这类项目因为涉及到 money，所以对逻辑严谨度要求高，页面之间交互复杂，又会伴随着登录、注册、用户信息等等，常常会让我们很头疼。既然还没人用 vue 写过这样的项目，那不如我来写，开源出来对能看到的人也会有帮助。
 
 这种功能性的项目很实用但是往往也很枯燥，没有音乐播放器那么看起来绚丽，思来想去发现饿了么是一个不错的素材，一来它足够复杂，开放的外卖平台比一般的公司独有商店更加复杂。二来 见到那么多美食，大家也不会感觉到厌烦。
 
@@ -10,19 +18,17 @@
 
 此项目大大小小共 45 个页面，涉及注册、登录、商品展示、购物车、下单等等，是一个完整的流程。一般公司即便是官网的单页面项目都没这么复杂，如果这个项目能驾驭的了，相信大部分公司的其他单页面应用也就不在话下，即便更复杂，也不会比这个高到哪里去。
 
-因为利用业余时间来做，年前就开始写，又跨个年，周期有点长，项目从零布局到完成共用了2个多月的时间。
+因为利用业余时间来做，年前就开始写，又跨个年，周期有点长，项目从零布局到完成共用了 2 个多月的时间。
 
-另外，这个项目和慕课网视频的那个饿了么没有任何关系，慕课网的项目只有一个页面，我在看完vue的官方文档后直接写了这个项目，没有参照任何人的代码，请大家不要混为一谈。
+另外，这个项目和慕课网视频的那个饿了么没有任何关系，慕课网的项目只有一个页面，我在看完 vue 的官方文档后直接写了这个项目，没有参照任何人的代码，请大家不要混为一谈。
 
-__注1：此项目纯属个人瞎搞，正常下单请选择饿了么官方客户端。__
+**注 1：此项目纯属个人瞎搞，正常下单请选择饿了么官方客户端。**
 
-__注2：项目预览地址和接口需要使用https访问哦！__
-
+**注 2：项目预览地址和接口需要使用 https 访问哦！**
 
 ## 技术栈
 
 vue2 + vuex + vue-router + webpack + ES6/7 + fetch + sass + flex + svg
-
 
 ## 项目运行
 
@@ -38,6 +44,7 @@ npm install 或 yarn(推荐)
 npm run dev
 
 ```
+
 ## 关于接口数据
 
 此项目的所有接口数据都来源于配套的后台系统，[后台项目传送地址](https://github.com/bailicangdu/node-elm)。
@@ -50,37 +57,34 @@ npm run dev
 
 如果只做前端开发，请忽略上面这几句话哟～
 
-
 # 说明
 
->  如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
+> 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^\_^
 
->  或者您可以 "follow" 一下，我会不断开源更多的有趣的项目
+> 或者您可以 "follow" 一下，我会不断开源更多的有趣的项目
 
->  开发环境 macOS 10.12.3  Chrome 56  nodejs 6.10.0
+> 开发环境 macOS 10.12.3 Chrome 56  nodejs 6.10.0
 
->  特别感谢[@bailichen](https://github.com/bailichen), [@iceRao](https://github.com/raoenhui)，在百忙之中抽出时间和我一起完成了这个项目，辛苦了🌹
+> 特别感谢[@bailichen](https://github.com/bailichen), [@iceRao](https://github.com/raoenhui)，在百忙之中抽出时间和我一起完成了这个项目，辛苦了 🌹
 
->  如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
+> 如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
 
->  [项目交流群](https://gitter.im/vue2-elm/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+> [项目交流群](https://gitter.im/vue2-elm/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
->  推荐一个 react + redux 开源项目，对react感兴趣的朋友赶紧去看看。[地址在这里](https://github.com/bailicangdu/react-pxq)
+> 推荐一个 react + redux 开源项目，对 react 感兴趣的朋友赶紧去看看。[地址在这里](https://github.com/bailicangdu/react-pxq)
 
->  另外一个 vue2 + vuex 的入门项目，比当前的项目简单很多，非常适合入门练习。[地址在这里](https://github.com/bailicangdu/vue2-happyfri)
-
+> 另外一个 vue2 + vuex 的入门项目，比当前的项目简单很多，非常适合入门练习。[地址在这里](https://github.com/bailicangdu/vue2-happyfri)
 
 # 效果演示
 
-[查看demo请戳这里](https://cangdu.org/elm/)（请用chrome手机模式预览）
+[查看 demo 请戳这里](https://cangdu.org/elm/)（请用 chrome 手机模式预览）
 
 ### 移动端扫描下方二维码
 
 <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/ewm.png" width="200" height="200"/>
 
-
-
 # 目标功能
+
 - [x] 定位功能 -- 完成
 - [x] 选择城市 -- 完成
 - [x] 搜索地址 -- 完成
@@ -99,7 +103,7 @@ npm run dev
 - [x] 下单功能 -- 完成 ✨✨🎉🎉
 - [x] 订单列表 -- 完成
 - [x] 订单详情 -- 完成
-- [x] 下载App -- 完成
+- [x] 下载 App -- 完成
 - [x] 添加、删除、修改收货地址 -- 完成
 - [x] 帐户信息 -- 完成
 - [x] 服务中心 -- 完成
@@ -107,49 +111,39 @@ npm run dev
 - [x] 上传头像 -- 完成
 - [ ] 付款 -- 臣妾做不到啊~~
 
-
-
 # 总结
 
-1、一般涉及到money的网页逻辑都比较复杂，尤其像饿了么这样一个开放的平台，商家和食品种类繁多，页面与页面之间交互复杂，在写到 购物车 和 下单 功能时众多的数据和逻辑一度让人很头疼，又没有设计和接口api文档，只能一步步摸索。
+1、一般涉及到 money 的网页逻辑都比较复杂，尤其像饿了么这样一个开放的平台，商家和食品种类繁多，页面与页面之间交互复杂，在写到 购物车 和 下单 功能时众多的数据和逻辑一度让人很头疼，又没有设计和接口 api 文档，只能一步步摸索。
 
-2、vue因其轻量级的框架在中小型项目中表现亮眼，在大型单页面应用中因为vuex的存在，表现依然出色，在处理复杂交互逻辑的时候，vuex的存在是不可或缺的。所以说利用 vue + vuex 完全可以去做大型的单页面项目。
+2、vue 因其轻量级的框架在中小型项目中表现亮眼，在大型单页面应用中因为 vuex 的存在，表现依然出色，在处理复杂交互逻辑的时候，vuex 的存在是不可或缺的。所以说利用 vue + vuex 完全可以去做大型的单页面项目。
 
-3、项目写到现在，从 登录注册到、首页、搜索、商家列表、购物车、下单、订单列表、个人中心 一个流程走完之后、不但对vue的理解更深一层，而且对以后掌控大型项目的时候也有非常多的帮助，做一个实际的项目才能对自己有很大的提升。
+3、项目写到现在，从 登录注册到、首页、搜索、商家列表、购物车、下单、订单列表、个人中心 一个流程走完之后、不但对 vue 的理解更深一层，而且对以后掌控大型项目的时候也有非常多的帮助，做一个实际的项目才能对自己有很大的提升。
 
 4、曾一度怀疑，花几个月的时间做这样一个项目到底有没有意义，本来只是想做一个小项目练练手，没想到后来越写越多，不过坚持下来后我相信一切都是值得的。
 
-5、项目已经完成，共45个页面。
-
+5、项目已经完成，共 45 个页面。
 
 # 最终目标
 
-1、用node.js构建一个模拟外卖平台的后台系统。[地址在这里](https://github.com/bailicangdu/node-elm)
+1、用 node.js 构建一个模拟外卖平台的后台系统。[地址在这里](https://github.com/bailicangdu/node-elm)
 
-2、写出跨 Android 和 IOS 的原生APP版本。[地址在这里](https://github.com/bailicangdu/native-xdm)
+2、写出跨 Android 和 IOS 的原生 APP 版本。[地址在这里](https://github.com/bailicangdu/native-xdm)
 
 3、如果时间来的及，会出一卖家版本。
 
-所以我的目的是构建一个横跨前后端，移动IOS、Android的完整生态圈。
+所以我的目的是构建一个横跨前后端，移动 IOS、Android 的完整生态圈。
 
 。。。敬请期待
 
-
-
-
 # 部分截图
-
 
 ### 商铺列表页
 
 <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/msite.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/msite.gif" width="365" height="619"/>
 
-
 ### 商铺筛选页
 
 <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/food.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/food.gif" width="365" height="619"/>
-
-
 
 ### 餐馆食品列表与购物车
 
@@ -159,25 +153,17 @@ npm run dev
 
 <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/confirm1.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/confirmOrder.gif" width="365" height="619"/>
 
-
 ### 搜索页
 
 <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/search.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/search.gif" width="365" height="619"/>
-
 
 ### 登录页
 
 <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/login1.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/login.gif" width="365" height="619"/>
 
-
 ### 个人中心
 
 <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/profile.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/profile.gif" width="365" height="619"/>
-
-
-
-
-
 
 # 项目布局
 
