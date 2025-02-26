@@ -1,9 +1,11 @@
 # 项目介绍
 
 - 本项目原地址是：[node-elm](https://github.com/bailicangdu/node-elm)，
-- node-api：node-elm-master
-- vue-h5: vue2-elm-master
-- vue-pc: vue-manage-master
+- node-api：node-elm
+- vue-h5: vue2-elm
+- vue-pc: vue-manage
+
+原先的项目因为时间比较久，mongodb 的数据库配置和 node 版本有冲突，本人用一天时间解决这些问题；其中涉及到 api 层的 mongodb 数据库和 vue2-elm 的 h5 中 node-sass 与 sass-loader 与 node 版本问题导致的启动报错问题等已被解决。如果想要运行项目，可以按照如下准备工作中的步骤启动 node-elm；按照项目运行中的 vue2-elm 安装对应版本的 node 和 node-sass sass-loader 版本运行
 
 ## 准备工作
 
