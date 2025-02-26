@@ -1,5 +1,7 @@
 # 2025
 
+- 0. node@v16.20.0
+
 - 1. mongodb mongoose connect-mongo 版本升级
 
 npm install mongodb@latest mongoose@latest connect-mongo@latest
