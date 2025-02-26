@@ -2,9 +2,10 @@ import express from 'express';
 import db from './mongodb/db.js';
 import config from 'config-lite';
 import router from './routes/index.js';
-import cookieParser from 'cookie-parser'
+import cookieParser from 'cookie-parser';
 import session from 'express-session';
-import connectMongo from 'connect-mongo';
+// import connectMongo from 'connect-mongo';
+import MongoStore from 'connect-mongo';
 import winston from 'winston';
 import expressWinston from 'express-winston';
 import history from 'connect-history-api-fallback';
@@ -16,31 +17,40 @@ const app = express();
 app.all('*', (req, res, next) => {
   const { origin, Origin, referer, Referer } = req.headers;
   const allowOrigin = origin || Origin || referer || Referer || '*';
-	res.header("Access-Control-Allow-Origin", allowOrigin);
-	res.header("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
-	res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
-  res.header("Access-Control-Allow-Credentials", true); //可以带cookies
-	res.header("X-Powered-By", 'Express');
-	if (req.method == 'OPTIONS') {
-  	res.sendStatus(200);
-	} else {
+  res.header('Access-Control-Allow-Origin', allowOrigin);
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Content-Type, Authorization, X-Requested-With',
+  );
+  res.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
+  res.header('Access-Control-Allow-Credentials', true); //可以带cookies
+  res.header('X-Powered-By', 'Express');
+  if (req.method == 'OPTIONS') {
+    res.sendStatus(200);
+  } else {
     next();
-	}
+  }
 });
 
 // app.use(Statistic.apiRecord)
-const MongoStore = connectMongo(session);
+// const MongoStore = connectMongo(session);
+const store = new MongoStore({
+  mongoUrl: config.url,
+  // 可选配置项
+  ttl: 14 * 24 * 60 * 60, // 会话过期时间（秒）
+  autoRemove: 'native', // 自动移除过期会话
+});
 app.use(cookieParser());
-app.use(session({
-  name: config.session.name,
-	secret: config.session.secret,
-	resave: true,
-	saveUninitialized: false,
-	cookie: config.session.cookie,
-	store: new MongoStore({
-  	url: config.url
-	})
-}))
+app.use(
+  session({
+    name: config.session.name,
+    secret: config.session.secret,
+    resave: true,
+    saveUninitialized: false,
+    cookie: config.session.cookie,
+    store,
+  }),
+);
 
 // app.use(expressWinston.logger({
 //     transports: [
@@ -71,7 +81,5 @@ router(app);
 app.use(history());
 app.use(express.static('./public'));
 app.listen(config.port, () => {
-	console.log(
-		chalk.green(`成功监听端口：${config.port}`)
-	)
+  console.log(chalk.green(`成功监听端口：${config.port}`));
 });
