@@ -19,9 +19,9 @@ services:
   mongo1:
     image: mongodb:latest
     container_name: mongo1
-    command: >
-      mongod --replSet rs0 --port 27017 --bind_ip_all
-      --auth --keyFile /data/mongodb/keyfile
+    #command: >
+      #mongod --replSet rs0 --port 27017 --bind_ip_all
+      #--auth --keyFile /data/mongodb/keyfile
     ports:
       - '27017:27017'
     environment:
