@@ -7,10 +7,10 @@ ENV MONGO_INITDB_ROOT_USERNAME=admin
 ENV MONGO_INITDB_ROOT_PASSWORD=123456
 
 # 复制自定义配置文件
-COPY mongod.conf /etc/mongod.conf
+# COPY mongod.conf /etc/mongod.conf
 
 # 复制副本集初始化脚本
-COPY init-replica.js /docker-entrypoint-initdb.d/
+# COPY init-replica.js /docker-entrypoint-initdb.d/
 
 # 暴露MongoDB默认端口
 EXPOSE 27017
