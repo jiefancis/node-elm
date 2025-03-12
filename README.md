@@ -37,7 +37,7 @@ node-elm 终端下，按顺序执行以下步骤：
 
      mongosh 'mongodb://admin:123456@localhost:27017/elm?authSource=admin'
 
-- 6. 初始化副本集
+- 6. 初始化副本集（使用prisma，则需要配置副本集）
 
 ```
   rs.initiate({ _id: 'rs0', members: [ { _id: 0, host: 'localhost:27017', priority: 2 }] })
